@@ -2,8 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-  font-family: 'Inter', sans-serif;
-  
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -30,7 +29,9 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
   body {
+    font-family: 'Inter', sans-serif;
     line-height: 1;
+    margin: 0;
   }
   ol, ul {
     list-style: none;
