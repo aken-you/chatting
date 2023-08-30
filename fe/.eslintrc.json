@@ -98,6 +98,7 @@
         "pathGroupsExcludedImportTypes": ["react"]
       }
     ],
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "import/no-named-as-default": "off"
   }
 }
