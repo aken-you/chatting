@@ -48,6 +48,15 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  button {
+    display: block;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    &:disabled {
+      cursor: default;
+    }
+  }
 `;
 
 export default GlobalStyle;
