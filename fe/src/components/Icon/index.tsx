@@ -1,3 +1,5 @@
+import { ICON_NAME } from '@constants/index';
+
 import { ReactComponent as Chatting } from '@assets/chatting.svg';
 import { ReactComponent as ChevronDown } from '@assets/chevronDown.svg';
 import { ReactComponent as ChevronLeft } from '@assets/chevronLeft.svg';
@@ -6,17 +8,6 @@ import { ReactComponent as Moon } from '@assets/moon.svg';
 import { ReactComponent as Plus } from '@assets/plus.svg';
 import { ReactComponent as Search } from '@assets/search.svg';
 import { ReactComponent as Sun } from '@assets/sun.svg';
-
-const ICON_NAME = {
-  CHATTING: 'chatting',
-  CHEVRON_DOWN: 'chevronDown',
-  CHEVRON_LEFT: 'chevronLeft',
-  HOME: 'home',
-  MOON: 'moon',
-  PLUS: 'plus',
-  SEARCH: 'search',
-  SUN: 'sun',
-} as const;
 
 const ICONS: Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>> = {
   [ICON_NAME.CHATTING]: Chatting,
