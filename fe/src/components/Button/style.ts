@@ -8,10 +8,10 @@ const shapeStyles = {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${({ theme }) => theme.colors.accent.bc.default};
+    background-color: ${({ theme }) => theme.colors.accent.bc?.default};
     border-radius: 10px;
     color: ${({ theme }) => theme.colors.accent.text.default};
-    font-size: ${({ theme }) => theme.fonts.body.size};
+    font-size: ${({ theme }) => theme.fonts.body.fontSize};
   `,
   circle: css`
     display: flex;
@@ -20,7 +20,7 @@ const shapeStyles = {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.primary.bc.default};
+    background-color: ${({ theme }) => theme.colors.primary.bc?.default};
   `,
 };
 
