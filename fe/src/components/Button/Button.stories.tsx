@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { ICON_NAME } from '@constants/index';
+
+import Icon from '@components/Icon';
+
 import Button from '.';
 
 const meta: Meta<typeof Button> = {
@@ -30,6 +34,7 @@ export const Circle: Story = {
   name: 'circle',
   args: {
     shape: 'circle',
+    children: <Icon name={ICON_NAME.CHEVRON_DOWN} fill="white" />,
   },
   argTypes: {
     shape: { control: 'none' },
