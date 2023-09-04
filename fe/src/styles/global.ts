@@ -48,6 +48,10 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  input {
+    outline: none;
+    border: none;
+  }
   button {
     display: block;
     border: 0;
