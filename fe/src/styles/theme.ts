@@ -1,4 +1,9 @@
-const fonts = {
+type FontsKey = 'title' | 'body' | 'headline' | 'subhead' | 'caption';
+type Font = { fontSize: string };
+
+type FontsType = Record<FontsKey, Font>;
+
+const fonts: FontsType = {
   title: {
     fontSize: '22px',
   },
@@ -34,7 +39,27 @@ const PALETTE = {
   gray900: '#2B2C2F',
 };
 
-const lightColors = {
+type ColorsKey = 'neutral' | 'primary' | 'danger' | 'secondary' | 'accent';
+type Color = {
+  text: {
+    default: string;
+    weak?: string;
+    strong?: string;
+  };
+  bc?: {
+    default: string;
+    weak?: string;
+    strong?: string;
+  };
+  bd?: {
+    default: string;
+    active?: string;
+  };
+};
+
+type ColorsType = Record<ColorsKey, Color>;
+
+const lightColors: ColorsType = {
   neutral: {
     text: {
       default: `${PALETTE.gray800}`,
@@ -53,21 +78,21 @@ const lightColors = {
     bc: { default: `${PALETTE.mint}`, weak: `${PALETTE.white}` },
   },
   danger: {
-    text: 'red',
-    bd: 'red',
+    text: { default: 'red' },
+    bd: { default: 'red' },
   },
   secondary: {
-    text: `${PALETTE.gray900}`,
-    bc: `${PALETTE.yellow}`,
+    text: { default: `${PALETTE.gray900}` },
+    bc: { default: `${PALETTE.yellow}` },
   },
   accent: {
     text: { default: `${PALETTE.white}`, weak: `${PALETTE.blue}` },
     bc: { default: `${PALETTE.blue}`, weak: `${PALETTE.white}` },
-    bd: `${PALETTE.blue}`,
+    bd: { default: `${PALETTE.blue}` },
   },
 };
 
-const darkColors = {
+const darkColors: ColorsType = {
   neutral: {
     text: { default: `${PALETTE.gray600}`, weak: `${PALETTE.gray700}`, strong: `${PALETTE.white}` },
     bc: { default: `${PALETTE.black}`, weak: `${PALETTE.gray900}`, strong: `${PALETTE.gray900}` },
@@ -78,18 +103,19 @@ const darkColors = {
     bc: { default: `${PALETTE.mint}`, weak: `${PALETTE.white}` },
   },
   danger: {
-    text: 'red',
-    bd: 'red',
+    text: { default: 'red' },
+    bd: { default: 'red' },
   },
   secondary: {
-    bc: `${PALETTE.yellow}`,
-    text: `${PALETTE.gray900}`,
+    bc: { default: `${PALETTE.yellow}` },
+    text: { default: `${PALETTE.gray900}` },
   },
   accent: {
     text: { default: `${PALETTE.white}`, weak: `${PALETTE.blue}` },
     bc: { default: `${PALETTE.blue}`, weak: `${PALETTE.white}` },
-    bd: `${PALETTE.blue}`,
+    bd: { default: `${PALETTE.blue}` },
   },
 };
 
 export { fonts, lightColors, darkColors };
+export type { FontsType, ColorsType };
